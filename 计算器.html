@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://lf26-cdn-tos.bytecdntp.com/cdn/expire-1-M/react/18.2.0/umd/react.production.min.js"></script>
+    <script
+        src="https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-M/react-dom/18.2.0/umd/react-dom.production.min.js"></script>
+    <script src="https://lf9-cdn-tos.bytecdntp.com/cdn/expire-1-M/babel-standalone/6.26.0/babel.min.js"></script>
+</head>
+<body>
+    <div id="app"></div>
+    <script type="text/babel">
+            const root= ReactDOM.createRoot(document.getElementById('app'));
+            var msg=0;
+            function add(){
+                msg+=1;
+                root.render(
+                    <div>
+                       <p>当前计算器：{msg}</p>
+                       <button ocClick={add}>+1</button> 
+                        </div>
+                )
+            }
+            root.render(
+                <div>
+                    <p>当前计算器：{msg}</p>
+                    <button onClick={add}>+1</button>
+                    </div>
+            )
+    </script>
+</body>
+</html>
